@@ -1,0 +1,100 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+  <!-- Custom fonts for this theme -->
+  {% load static %}
+
+
+</head>
+
+<body id="page-top">
+
+        <!-- Masthead -->
+        <header></header>
+      
+        <section class="page-section masthead" id="contact">
+            <div class="container">
+                      <!-- Contact Section Heading -->
+              <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contacto</h2>
+        
+              <!-- Icon Divider -->
+              <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                  <i class="fas fa-book-open"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+              </div>
+        
+              <!-- Contact Section Form -->
+              <div class="row">
+                <div class="col-lg-8 mx-auto">
+                  <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                  <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Nombre</label>
+                        <input class="form-control" id="name" type="text" maxlength="50" placeholder="Nombre" required="required" data-validation-required-message="Por favor ingresa tu nombre.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Correo</label>
+                        <input class="form-control" id="email" type="email" maxlength="50" placeholder="Correo" required="required" data-validation-required-message="Por favor ingresa tu correo.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Número de teléfono</label>
+                        <input class="form-control" id="telefono" type="tel" pattern="[0-9]{8}" placeholder="Número de teléfono" maxlength="8" required="required" data-validation-required-message="Por favor ingresa tu número de teléfono.">
+                      <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                          <label>Comuna</label>
+                          <input class="form-control" id="region" type="search" maxlength="20" placeholder="Comuna" pattern="Cerrillos|La Reina|Pudahuel|Cerro Navia|Las Condes|Quilicura|Conchalí|Lo Barnechea|Quinta Normal|El Bosque|Lo Espejo|Recoleta|Estación Central|Lo Prado|Renca|Huechuraba|Macul|San Joaquín|Independencia|Maipú|San Miguel|La Cisterna|Ñunoa|San Ramón|La Florida|Pedro Aguirre Cerda|Santiago|La Granja|Peñalolén|Vitacura|La Pintana|Providencia|Padre Hurtado|San Bernardo|Puente Alto|Pirque|San José de Maipo"  autocomplete="off" required="required" data-validation-required-message="Por favor ingresa tu comuna.">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Mensaje</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Mensaje" required="required" data-validation-required-message="Por favor ingresa un mensaje."></textarea>
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <br>
+      
+                    <div id="success"></div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Enviar</button>
+                      </div>
+                      
+                    
+                  </form>
+      
+                  
+      
+                </div>
+            </div>
+        
+        </div>
+    </section>
+</body>
+
+{% endblock %}

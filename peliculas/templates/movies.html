@@ -1,0 +1,79 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+  <!-- Custom fonts for this theme -->
+  {% load static %}
+
+
+</head>
+
+  <!-- Theme CSS -->
+
+
+<body id="page-top">
+
+  <!-- Navigation -->
+ 
+  <div class="masthead container d-flex align-items-center flex-column">
+    <!-- Portfolio Section Heading -->
+    
+    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"> Todas las peliculas</h2>
+    
+   
+    <!-- Icon Divider -->
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon">
+        <i class="fas fa-film"></i>
+      </div>
+      <div class="divider-custom-line"></div>
+    </div>
+    <div style="width: 92%; height: 50px;">
+     
+          <!--===============================================================================================-->
+          {% if user.is_authenticated  %}{% if user.is_staff %}
+
+          <a class="btn btn-primary" href="{% url 'movie_create' %}" style="float: right; font-size: 14px;">Agregar Pelicula <span class="glyphicon glyphicon-plus"></span></a>
+          <!--=======aqui codigo=======-->
+        
+          {% else %}{% endif %}{% else %}{% endif %}
+          <!--===============================================================================================--> 
+   
+
+  </div>
+<!--  -->
+
+<!-- -->
+<div class="row">
+{% for movie in num_movies %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{{ movie.image.url}}">
+            <div class="card-body">
+                <h5 class="card-title text-uppercase">{{ movie.title }}</h5>
+                <a href="{% url 'movie-detail' movie.pk %}"
+                   class="btn btn-primary" style="float: right;">
+                    Ver más
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+    
+</div>
+{% endblock %}

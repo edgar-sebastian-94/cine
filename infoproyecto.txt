@@ -1,0 +1,9 @@
+--- usuario administrador ---
+usuario: cachupin
+contraseña: duoc12
+
+--- grupo cine ---
+usuario: PersonalCine1
+contraseña: duoc1234
+
+http://127.0.0.1:8000/peliculas/
